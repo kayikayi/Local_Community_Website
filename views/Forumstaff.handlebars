@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drago's Community - Forum for Staff</title>
+	<script src="modules/flags.js"></script>
+	<link rel="stylesheet" type="text/css" href="global.css">
+
+<body id="forumpage" class="page">
+	<nav class="nav-bar">
+			<a class="logo" href="/h"><img src="views/imgs/dragos3.png" alt="logo"></a>
+            <ul class="nav-menu">
+                <li><a href="/postIssue" class="underline"> Post issue </a></li>
+               	<li><a href="/about" class="underline"> About us </a></li>
+				<li><a href="/logout" class="underline"> Log out </a></li>
+            </ul>
+        </nav>
+		
+	<p class= "SearchBox">  
+		<form action="/forum" method="get">
+			<h1>Find Everything Near You </h1>
+			<p class="Form-box">
+				<select type="text" class = "filters" name="filterStatus" value="{{query}}"> 
+					<option value=""></option>
+					<option value="reported">reported</option>
+					<option value="allocated">allocated</option>
+					<option value="resolved">resolved</option>
+				</select>
+				<input type="submit" class="search-btn" value="Search">
+			</p>
+		</form>
+	</p>
+
+	<section class="posts-section">
+    	<main class="main" role="main">
+        <p class ="panel-panel-forum"></p>
+        <p class ="panel-heading">Posts</p>
+        <table class ="table">
+            <thead>
+            	<tr>
+					<th class="Number">Nr</th>
+            		<th class="Title">Issues</th>
+        			<th class ="Statistics">Statistics</th>
+            	</tr>
+            </thead>
+			<tbody class="post-table-body">
+				{{#each posting}}
+				<tr class="post-row">
+					<td class="nr-cell">
+						<h3>{{idflag}}</h3>
+					</td>
+					<td class="issues-cell">
+						<h3>{{title}}</h3>
+						{{description}}
+						<br><h4>by {{user}}</h4>
+						<h4>Posted On: {{date}}</h4>
+					</td>
+					<td class="stats-cell">
+						<form action="/forumstatus" method="post">
+						<h3>Status: 
+							<select class ="post_field" name="statusIssue">
+								<option value="{{statusIssue}}">{{statusIssue}}</option>
+								<option value="{{statusIssue}}">=====</option>
+								<option value="reported">reported</option>
+								<option value="allocated">allocated</option>
+								<option value="resolved">resolved</option>
+							</select>
+							<select class ="post_idflag" name="idflag">
+								<option value={{idflag}}>{{idflag}}</option>
+							</select>
+							<input type="submit" class="post_submit" value="Update">
+						</h3>
+						</form>
+						<form action="/forumprioritising" method="post">
+						<h3>Prioritised: 
+							<select class ="post_field" name="prioritised">
+								<option value="{{prioritised}}">{{prioritised}}</option>
+								<option value="{{prioritised}}">====</option>
+								<option value="yes">yes</option>
+								<option value="no">no</option>
+							</select>
+							<select class ="post_idflag" name="idflag">
+								<option value={{idflag}}>{{idflag}}</option>
+							</select>
+							<input type="submit" class="post_submit" value="Update">
+						</h3>
+						</form>
+						<h3>Votes: {{totalVotes}}</h3>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+	</section>
+
+
+
+	<!--<ul class = "posts">
+	{{#each posting}}
+	<li>{{this.title}} - {{this.description}}</li>
+	{{/each}}
+	</ul>
+
+	
+	<ol>
+	    {{#each posting}}
+	      <li><h3 class="title-description">{{this.title}}: {{this.description}}</h3></li>
+	    {{/each}}
+    </ol>
+	-->
+</body>
+</html>

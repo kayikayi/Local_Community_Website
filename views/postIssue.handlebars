@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    
+        <title>Drago's Community - Post issue</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="global.css" />
+
+    </head>
+	<body>
+		<nav class="nav-bar">
+			<a class="logo" href="/h"><img src="views/imgs/dragos3.png" alt="logo"></a>
+            <ul class="nav-menu">
+                <li><a href="/forum" class="underline">Community </a></li>
+				<li><a href="/logout" class="underline"> Log out </a></li>
+            </ul>
+        </nav>
+        <section id="post-section">
+            <h1 class="post_something">Post issue</h1>
+            <form action="/post" method="post">
+             		<p class="post_something"><strong>Your Username:  {{user}}</strong><br>
+               		<p class="post_something"><strong>Tell us whats wrong?</strong><br>
+            <input type="text" class="post_field" name="title" size=40 maxlength=150 autocomplete="off">
+			   		<p class="post_something"><strong>What type of issue?</strong><br>
+            <select class ="post_field" name="typeIssue">
+  					<option value="empty"></option>
+  					<option value="noise_pollution">Noise pollution</option>
+  					<option value="litter">Liter</option>
+					<option value="potholes">Potholes</option>
+					<option value="speeding">Speeding</option>
+  					<option value="other">Other</option>
+			</select>
+				<p class="post_something"><strong>Street name:</strong><br>
+            <input type="text" class="post_field" name="location" size=40 maxlength=150 autocomplete="off">
+			<p class="post_something"><strong>Postcode:</strong><br>
+            <input type="text" class="post_field" name="postcode" size=40 maxlength=150 autocomplete="off">
+               		<p class="post_something"><strong>Description:</strong><br>
+            <input type="text" class="post_field" name="description" size=40 maxlength=150 autocomplete="off">
+               		<p class="post_something">
+			<input type="submit" class="post_submit" value="Post">
+            </form>
+        </section>
+        <!--<section>
+	<p class="page-body">
+			<main class="main" role="main">
+				<p class ="panel-panel-forum">
+					<p class ="panel-heading">Categories</p>
+					<p class = "panel-inner">
+						<table class ="table">
+							<thead>
+								<tr>
+									<th class="Title">Title</th>
+									<th class ="Statistics">Statistics</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="title-colm">
+										<p class="logo"><img src="views/imgs/information.png" class="image"></p>
+										<p class="desc-wrapper">
+											<a class="forum-title" href="">HELP! My toilet water is not going down!!!</a> 
+											<br>
+	
+											<a class="description">Water is not going down, dunno why</div></a>
+										</p>
+									</td>
+									<td class="Flags">
+										<form>
+											<input type="checkbox" id="flag" name="flag" value="check">
+											<label for="flag">
+												<img class="flagImage" src="views/imgs/flag.png">
+											</label>
+										</form>
+									</td>
+									<td class="stats-colm">
+										<p class="stats-wrapper">24 Topics <br> 81 Posts</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				</p>
+			</main>
+	</p>
+        </section>-->
+
+	</body>
+</html>

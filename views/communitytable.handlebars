@@ -1,0 +1,104 @@
+      <!DOCTYPE html>
+      <html lang="en">
+        
+      <head>
+      
+      <title>R.A.R</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script href="C:\Users\Tracy\project\modules/community.js"></script>
+      <link href="/views/css/communitytable.css" rel="stylesheet">
+      <!--change link-->
+      
+      </head>
+   
+      <body>
+          <section class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Search Issue</button>
+              <section id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <a href="#Speeding">Speeding</a>
+                <a href="#Noise">Noise</a>
+                <a href="#Litter">Litter</a>
+                <a href="#Potholes">Potholes</a>
+              </section>
+          </section>
+            
+            <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            function filterFunction() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              div = document.getElementById("myDropdown");
+              a = div.getElementsByTagName("a");
+              for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  a[i].style.display = "";
+                } else {
+                  a[i].style.display = "none";
+                }
+              }
+            }
+            </script>
+          </form>
+        </section>
+
+      <h1>Community table </h1>
+
+      <section class="row">
+          <section class="column" style="background-color:white;">
+            <h2>Reported</h2>
+            <section class="container">
+                <form action="">
+                  <fieldset>
+                  <label for="Description"></label>
+                  <input type ="text" id ="description" name ="description" placeholder ="Describe the issue"><br>
+                  <input type="radio" name="vote" value="affects-area">Vote if issue affects area<br>
+                  <input type="radio" name="vote" value="affects-area">Staff Prioritizing
+                  
+            
+          </section>
+        </section>
+        </fieldset>
+      </form>
+
+          <section class="column" style="background-color:white;">
+            <h2>Allocated</h2>
+            <section>
+                <form action="">
+                  <fieldset>
+                  <label for="Description"></label>
+                  <input type ="text" id ="description" name ="description" placeholder ="Describe the issue"><br>
+                  <input type="radio" name="vote" value="affects-area">Vote if issue affects area<br>
+                  <input type="radio" name="vote" value="affects-area">Staff Prioritizing
+            
+           
+          </section>
+        </section>
+        </fieldset>
+      </form>
+          
+          <section class="column" style="background-color:white;">
+              <h2>Resolved</h2>
+              <section >
+                  <form action="">
+                    <fieldset>
+                    <label for="Description"></label>
+                    <input type ="text" id ="description" name ="description" placeholder ="Describe the issue"><br>
+                    <input type="radio" name="vote" value="affects-area">Vote if issue affects area<br>
+                    <input type="radio" name="vote" value="affects-area">Staff Prioritizing
+              
+            </section>
+            </section>
+          </fieldset>
+        </form>
+      </section>
+      </body>
+      </html>
+    

@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color:#4caf50;
+    margin-bottom: 20px;
+}
+
+body {
+    
+    background-color: whitesmoke;
+    font-family: helveticaneue, Arial;
+    font-size: 18px;  
+}
+
+
+h1,h2{
+    color: black;
+}
+
+h1 {
+    
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;   
+    margin-bottom: 10px;
+}
+p{
+    font-size: 110%;
+    background-color: rgba(222, 224, 137, 0.589);
+}
+.aboutus{
+    padding-top: 20px;
+    
+}
+
+.main-text{
+    text-align: justify;
+}
+.end-text{
+    font-size: 22px;
+}
+.menu{
+    margin-left: 40px;
+    position: relative;
+    padding-top: 40px;
+    list-style: none;
+}
+.menulist{
+    margin-top: 35px;
+    display: inline-block;
+    margin-left: 30px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    
+    
+}
+.menulist:hover::after{
+    width: 100%;
+    transition: width .2s;
+
+    
+}
+.menulist::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background: whitesmoke;
+    transition: width .2s;
+
+}
+
+.logo{
+    float: left;
+    
+}
+.login{
+    float: right;
+    padding-right: 20px;
+    
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(82, 61, 61);
+    font-weight: bold;
+}
+
+.news{
+    text-align: center;
+    font-size: 110%;
+}
+.slider{
+    width: 800px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.slideshow{
+    position: relative;
+    width: 3200px;
+    animation-name: slideranimation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+    
+}
+.slideshow img{
+    float: left;
+}
+@keyframes slideranimation{
+    0%{
+        left: 0px;
+        
+    }
+    20% {
+        left: 0px;
+        
+    }
+    25% 
+    {
+        left: -800px;
+        
+    }
+    45% 
+    {
+        left: -800px;
+    }
+    50% 
+    {
+        left: -1600px;
+    }
+    70%
+    {
+        left: -1600px;
+    }
+    75%
+    {
+        left: -2400px;
+    }
+    95%{
+        left: -2400px;
+    }
+    100%
+    {
+        left: -3200px;
+    }
+   
+    
+}
+footer{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color:rgb(20, 187, 20);
+}
+.contact{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

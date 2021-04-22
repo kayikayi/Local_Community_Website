@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drago's Community - Forum</title>
+	<script src="modules/flags.js"></script>
+	<link rel="stylesheet" type="text/css" href="global.css">
+
+<body id="forumpage" class="page">
+	<nav class="nav-bar">
+			<a class="logo" href="/h"><img src="views/imgs/dragos3.png" alt="logo"></a>
+            <ul class="nav-menu">
+                <li><a href="/postIssue" class="underline"> Post issue </a></li>
+               	<li><a href="/about" class="underline"> About us </a></li>
+				<li><a href="/logout" class="underline"> Log out </a></li>
+            </ul>
+        </nav>
+	<p class= "SearchBox">  
+		<form action="/forum" method="get">
+			<h1>Find Everything Near You </h1>
+			<p class="Form-box">
+				<select type="text" class = "filters" name="filterStatus" value="{{query}}"> 
+					<option value=""></option>
+					<option value="reported">reported</option>
+					<option value="allocated">allocated</option>
+					<option value="resolved">resolved</option>
+				</select>
+				<input type="submit" class="search-btn" value="Search">
+			</p>
+		</form>
+	</p>
+
+	<section class="posts-section">
+    	<main class="main" role="main">
+        <p class ="panel-panel-forum"></p>
+        <p class ="panel-heading">Posts</p>
+        <table class ="table">
+            <thead>
+            	<tr>
+					<th class="Number">Nr</th>
+            		<th class="Title">Issues</th>
+        			<th class ="Statistics">Statistics</th>
+            	</tr>
+            </thead>
+			<tbody class="post-table-body">
+				{{#each posting}}
+				<tr class="post-row">
+					<td class="nr-cell">
+						<h3>{{idflag}}</h3>
+					</td>
+					<td class="issues-cell">
+						<h3>{{title}}</h3>
+						{{description}}
+						<br><h4>by {{user}}</h4>
+						<h4>Posted On: {{date}}</h4>
+					</td>
+					<td class="stats-cell">
+						<h3>Status: {{statusIssue}}</h3>
+						<br>
+						<h3>Prioritised: {{prioritised}}</h3>
+						<br>
+						<form action="/forumvote" method="post">
+						<h3>Votes: {{totalVotes}}
+						&nbsp;
+						<select class ="post_vote_issue" name="voteIssue">
+								<option value={{voteIssue}}>{{voteIssue}}</option>
+						{{#unless voted}}
+						<input type="submit" class="post_submit_plus" value="+Vote"></h3>
+						{{/unless}}
+						<select class ="post_idflag" name="idflag">
+								<option value={{idflag}}>{{idflag}}</option>
+						</select>
+						</form>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+	</section>
+</body>
+</html>

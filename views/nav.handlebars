@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Drago's Community - Home</title>
+		<script defer src="/modules/sidemenu.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="global.css">
+		<link 
+              rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script
+                src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+        
+	</head>
+	<body id="homepage" class="page">
+		<div id="sideprofile" class="sidemenu">
+			<ul class="side">
+				<li><a onclick="closeprofile()" class="underline">Back</a></li>
+				<li><a>{{username}}</a></li>
+				<form action="/h" method="post" autocomplete="off">
+					<div class="textbox">
+    					<input type="password" name="pass" placeholder="Old Password" value="">
+  					</div>
+					<div class="textbox">
+						<input type="password" name="newpass" placeholder="New Password" value="">
+					</div>
+					<input type="submit" class="button" value="Update">
+				</form>
+			</ul>
+		</div>
+
+		<nav class="nav-bar">
+			<a class="logo" href="/h"><img src="views/imgs/dragos3.png" alt="logo"></a>
+            <ul class="nav-menu">
+                <li><a href="/forum" class="underline">Community </a></li>
+                <li><a href="/postIssue" class="underline"> Post issue </a></li>
+               	<li><a href="/about" class="underline"> About us </a></li>
+				<li><a class="underline" onclick="openprofile()"> Profile </a></li>
+				<li><a href="/logout" class="underline"> Log out </a></li>
+            </ul>
+        </nav>
+
+		<!-- shueb's code -->
+		<figure class="slider" >
+
+            <figure class="slideshow">
+            
+                <img src="shueb/img/1.jpg">
+                <img src="shueb/img/2.jpg">
+                <img src="shueb/img/3.jpg">
+                <img src="shueb/img/4.jpg">
+                </figure> 
+        </figure>
+        <article class="aboutus">
+            <h1>About us</h1>
+            <p> There are so many things for you to see and do in Dragos community. From music, theatre and festivals, to museums, Cathedrals and medieval history, the city has something for everyone. Home to rich history, ancient legends and an abundance of unique arts and culture, Dragos community has an exciting future as the European City of Sport 2019, UK City of Culture 2021 and a host city for the Commonwealth Games 2022.
+
+Dragos community is just one hour from London by train and with great transport links to surrounding areas, our central location makes the city an ideal destination to visit.</p>
+
+
+        </article>
+        <h1 class="ttd"> THINGS TO DO </h1>
+        <section class="thingstodo">
+            <ul>
+                <li> 
+                    <h3 class="ttdTitle"> The Wave </h3>
+                    <img class="ttdImg" src="shueb/img/wave.jpg"> 
+                    <p class="ttdParagraph">  The wave is a brand new water park, located in the city centre. The landmark complex provides high-quality facilities and a wide range of fun and relaxing activities at affordable prices for adults, families, children and organisations. .  </p>
+                </li>
+                <li>  
+                    <h3 class="ttdTitle"> The Transport Museum </h3>
+                    <img class="ttdImg" src="shueb/img/tm.jpg">
+                    <p class="ttdParagraph"> Transport Museum houses the largest publicly owned collection of British vehicles  and tells the story of a city which changed the world through transport. Visitors can expect captivating displays, interactive galleries, memorable and luxurious vehicles of the last 200 years </p>
+                </li>
+                <li> 
+                     <h3 class="ttdTitle"> Midlands Air Museum </h3>
+                    <img class="ttdImg" src="shueb/img/mam.jpg">
+                    <p class="ttdParagraph"> The Midlands Air Museum is one of the country's leading self-funded independent aviation museums. Exhibits at the Midland Air Museum range from the magnificent Avro Vulcan bomber through more than 30 other historic aircraft, both civil and military, aero engines and other artefacts, to a wide range of memorabilia. </p>
+ </p>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section id="map"></section>
+      	<script src="modules/map.js"></script>
+        
+<footer>
+    <nav class="footernav">
+
+        <ul class="footer">
+            <li class="footerlist"><a href="/home"> Home </a></li>
+            <li class="footerlist"><a href="/forum"> Community </a></li>
+            <li class="footerlist"><a href="/about"> About Us</a></li>
+        </ul> 
+    </nav>
+      
+</footer>
+    
+
+</html>

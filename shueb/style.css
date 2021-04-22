@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+body {
+    
+    background-color: whitesmoke;
+    font-family: helveticaneue, Arial;
+    font-size: 18px;  
+}
+
+
+h1,h2{
+    color: black;
+}
+
+h1 {
+    
+    font-size: 45px;
+    color: green;
+    
+}
+h2 {
+    
+    font-size: 20px;   
+    margin-bottom: 10px;
+}
+.welcome{
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin-top: 10px;
+}
+
+.main-text{
+    text-align: justify;
+}
+.end-text{
+    font-size: 22px;
+}
+.title{
+    float:left;
+    width: 35%;
+    margin: 0 auto;
+    /*background-image: url(coventry.jpg);
+    width: 1350px;*/
+    
+}
+.menu{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.footer{
+    
+    display: block;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    background-color: aqua;
+    
+}
+.menulist{
+    margin-top: 35px;
+    margin-bottom: px;
+    display: inline-block;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    transition: 3s;
+    
+}
+.menulist:hover{
+    background: rgb(230, 16, 16);
+    font-weight: bold;
+    
+    
+}
+.login{
+    float: right;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.log_reg{
+  
+    font-size: 20%;
+}
+a{
+    text-decoration: none;
+    color: rgb(82, 61, 61);
+    text-transform: uppercase;
+    
+}
+
+.news{
+    text-align: center;
+    font-size: 110%;
+}
+img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
